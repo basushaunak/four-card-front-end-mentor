@@ -45,49 +45,46 @@
     font-size: 0.9375rem;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html{
     font-family: var(--font-list);
 }
 
-img{
-    display: block;
-    margin-inline-start: auto;
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
-    font-weight: var(--font-lite);
-}
-
-h1 > span{
-    font-weight: var(--font-bold);
-}
-
-header > p{
-    font-weight: var(--font-lite);
-}
-h2{
-    font-weight: var(--font-normal);
-}
 
 .wrapper-header{
-    max-width: 500px;
-    min-width: 375px;
+    max-width: 600px;
     margin-inline: auto;
+    margin-block: 6rem;
+    text-align: center;
 }
 
 .wrapper{
-    min-width: 375px;
-    max-width: 800;
+    max-width: 1200px;
+    margin-inline: auto;
+    
 }
 
 .card-grid{
-    
+    --card-gap: 1.2rem;
     display: flex;
-    margin-inline: auto;
+    gap: var(--card-gap);
+}
+.card-grid >*{
+    flex: 1;
+    border: 1px red solid;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap);
+    align-items: center;
+}
+
+.card{
+    background: grey;
 }
